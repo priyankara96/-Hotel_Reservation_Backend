@@ -7,12 +7,14 @@ const dotenv = require('dotenv')
 dotenv.config()
 const app = express();
 
-const adminRoutes = require('./routes/admin')
+const adminRoutes = require('./routes/admin');
+const roomsRoutes = require('./routes/rooms')
 
 app.use(bodyParser.json());
 app.use(cors());
 
 app.use(adminRoutes);
+app.use(roomsRoutes);
 
 const PORT =8000;
 
