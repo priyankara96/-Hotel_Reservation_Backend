@@ -24,6 +24,11 @@ const roomsSchema = new mongoose.Schema({
 },
 Other:{
     type:String
+},
+
+Availability:{
+    type:String,
+    
 }
 
 }, { timestamps: true});
