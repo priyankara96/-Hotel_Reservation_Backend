@@ -25,6 +25,7 @@
     "jsonwebtoken": "^8.5.1",
     "jwt-decode": "^3.1.2",
     "mongoose": "^6.3.2",
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.16",
+    "telesignsdk": "^2.2.1"
   }
 }
