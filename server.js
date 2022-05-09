@@ -9,12 +9,16 @@ const app = express();
 
 
 const roomsRoutes = require('./routes/rooms')
+const reserveRoutes = require('./routes/reservation');
+const routAuthentication = require("./routes/AuthenticationRoute");
 
 app.use(bodyParser.json());
 app.use(cors());
 
 
 app.use(roomsRoutes);
+app.use(reserveRoutes);
+app.use(routAuthentication);
 
 const PORT =8000;
 
