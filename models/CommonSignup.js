@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const CommonSignupSchema = new mongoose.Schema({
+const CommonSignupSchema = new mongoose.Schema ({
     name:{
         type: String,
         required: true,
