@@ -108,6 +108,30 @@ router.post("/login", async (req, res) => {
     res.status(500).send({ message: "failed", data: err });
   }
 });
+
+// Update All Data
+router.route('/AllData/update/:id').put((req, res) => {
+  CommonSignup.findById(req.params.id)
+      .then(exercise => {
+          exercise.name = req.body.name;
+          exercise.name1 = req.body.name1;
+          exercise.birthday = req.body.birthday;
+          exercise.gender = req.body.gender;
+          exercise.nic = req.body.nic;
+          exercise.email = req.body.email;
+          exercise.number = req.body.number;
+          exercise.role = req.body.role;
+          exercise.inputpw = req.body.inputpw;
+
+          exercise.save()
+              .then(() => res.json('User updated!'))
+              .catch(err => res.status(400).json('Error: ' + err));
+      })
+      .catch(err => res.status(400).json('Error: ' + err));
+});
+
+
+
 module.exports = router;
 
 
