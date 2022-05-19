@@ -11,6 +11,8 @@ const roomsRoutes = require("./routes/rooms");
 const reserveRoutes = require("./routes/reservation");
 const routAuthentication = require("./routes/AuthenticationRoute");
 const paymentsgateway = require("./routes/payments");
+const taxiRoutes = require('./routes/taxi')
+
 
 app.use(bodyParser.json());
 app.use(cors());
@@ -19,6 +21,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(roomsRoutes);
 app.use(reserveRoutes);
 app.use(routAuthentication);
+app.use(taxiRoutes)
 
 
 const PORT = 8000;
